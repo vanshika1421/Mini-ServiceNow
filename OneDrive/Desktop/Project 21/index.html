@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 20th Birthday! 🎧🎂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Birthday confetti -->
+  <div class="confetti-container">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="hearts-container">
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💝</div>
+    <div class="heart">💖</div>
+  </div>
+
+  <div class="player-container">
+    <div class="slideshow">
+      <div class="media-indicator">
+        <span id="media-type">📸 Photo</span>
+      </div>
+      <img id="slideshow-img" src="assets/img1.jpg" alt="Us 💑" />
+      <video id="slideshow-video" controls muted style="display: none;">
+        <source src="" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="slideshow-controls">
+        <button id="prev-btn">⬅️</button>
+        <button id="play-pause-btn">⏸️</button>
+        <button id="next-btn">➡️</button>
+      </div>
+    </div>
+
+    <div class="birthday-message">
+      <h1 class="birthday-title">🎉 Happy 20th Birthday! 🎉</h1>
+      <p class="birthday-subtitle">From My Heart to Yours ❤️</p>
+    </div>
+
+    <h2 class="now-playing">🎙️ Now Playing: <em>My Voice Note for You</em></h2>
+
+    <!-- Voice recording -->
+    <audio id="audio-player" controls>
+      <source src="assets/voice-note.mp3" type="audio/mpeg" />
+      <source src="assets/voice-note.m4a" type="audio/mp4" />
+      <source src="assets/voice-note.wav" type="audio/wav" />
+      <source src="assets/voice-note.ogg" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Background music controls -->
+    <div class="background-music-controls">
+      <span class="bg-music-label">🎹 Happy Birthday Piano:</span>
+      <button id="bg-music-toggle" class="bg-music-btn">🔊</button>
+      <input type="range" id="bg-volume" class="volume-slider" min="0" max="0.06" step="0.01" value="0.03" />
+    </div>
+
+    <!-- Hidden background music player -->
+    <audio id="background-music" loop>
+      <!-- Beautiful Happy Birthday Piano Version -->
+      <source src="https://pixabay.com/music/special-occasions-happy-birthday-to-you-piano-version-13976/" type="audio/mpeg" />
+      <source src="https://www.bensound.com/bensound-music/bensound-pianomoment.mp3" type="audio/mpeg" />
+      <source src="assets/happy-birthday-piano.mp3" type="audio/mpeg" />
+      <source src="assets/background-music.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
