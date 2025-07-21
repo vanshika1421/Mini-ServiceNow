@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Birthday Surprise 🎂</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .login-title {
+      color: #ff6b6b;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .password-input {
+      padding: 15px;
+      font-size: 18px;
+      border: 2px solid #ff9a9e;
+      border-radius: 10px;
+      margin: 10px;
+      width: 250px;
+      text-align: center;
+    }
+    .login-btn {
+      background: linear-gradient(45deg, #ff6b6b, #ff9a9e);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.2s;
+    }
+    .login-btn:hover {
+      transform: scale(1.05);
+    }
+    .error {
+      color: #ff4757;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1 class="login-title">🎂 Private Birthday Surprise</h1>
+    <p>This is a special birthday message for someone very special! 💕</p>
+    <input type="password" id="passwordInput" class="password-input" placeholder="Enter password" />
+    <br>
+    <button onclick="checkPassword()" class="login-btn">Open Birthday Gift 🎁</button>
+    <div id="errorMsg" class="error"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('passwordInput').value;
+      const correctPassword = 'HappyBirthday20'; // Change this to your desired password
+      
+      if (password === correctPassword) {
+        window.location.href = 'birthday.html';
+      } else {
+        document.getElementById('errorMsg').innerText = 'Wrong password! Ask the sender for the correct password 💝';
+      }
+    }
+    
+    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        checkPassword();
+      }
+    });
+  </script>
+</body>
+</html>
