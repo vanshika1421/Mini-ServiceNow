@@ -1,0 +1,7 @@
+# Ignore node_modules and cache folders
+node_modules/
+.cache/
+frontend/node_modules/
+frontend/.cache/
+backend/node_modules/
+backend/.cache/
