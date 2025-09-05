@@ -1,0 +1,37 @@
+{
+  "name": "servicenow-it-helpdesk",
+  "version": "1.0.0",
+  "description": "Mini ServiceNow IT Helpdesk Ticketing System with enterprise-grade UI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "seed": "cd backend && node scripts/seedData.js",
+    "setup": "npm run install-deps && npm run seed",
+    "install-deps": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [
+    "servicenow",
+    "helpdesk",
+    "ticketing",
+    "react",
+    "nodejs",
+    "mongodb",
+    "enterprise"
+  ],
+  "author": "ServiceNow IT Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}
